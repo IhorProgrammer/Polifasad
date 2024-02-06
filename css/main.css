@@ -1,0 +1,158 @@
+*{
+    color: white;
+    font-family: "Geometria", sans-serif;
+}
+p{
+    font-weight: 300;
+}
+nav .sidenav-trigger{
+    margin: 0;
+}
+
+
+.header-container{
+    display: flex;
+    flex-direction: column;
+    height: inherit; 
+    position: relative;
+}
+.header-container > .header-content{
+    flex: 1;
+}
+.header-content-left{
+    width: 50%;
+    margin-top: 150px;
+    text-align: center;
+}
+.header-bgn-right{
+    position: absolute !important;
+    bottom: 0;
+    right: -15%;
+    max-height: 60%;
+    max-height: 80%;
+    z-index: 0;
+
+}
+nav {
+    background-color: #ffffff00;
+    box-shadow: none;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    margin-left: 10px;
+    font-size: 100%;
+    text-transform: uppercase;
+}
+
+.nav-reverse{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.bgn-slider{
+    z-index: -1;
+}
+
+.bgn-slider::before{
+    position: absolute !important;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45); 
+    z-index: 1;
+    
+}
+.bgn-slider-overflow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    overflow: hidden;
+}
+
+.phone-btn-trigger{
+    margin-top: 20px;
+}
+
+.phone_list li>a{
+    color: white;
+    text-align: center;
+    font-weight: normal;
+}
+
+
+header, .bgn-slider, .bgn-slider img{
+    height: 600px;
+}
+
+.preference{
+    background-color: #C7B299;
+    padding: 1px;
+}
+.preference-title{
+    font-size: 30px;
+    font-weight: bold;
+    color: #534741;
+    text-transform: uppercase;
+}
+
+.cards .card{
+    border: 8px solid white;
+    border-radius: 20%;
+    margin: 0px 10px;
+    background-color: #534741;
+    height: 200px;
+}
+
+.card .card-content{
+    padding: 0px;
+}
+
+
+
+@media screen and (max-width: 992px) {
+    
+    .header-bgn-right {
+        display: none;
+    }
+
+    header, .bgn-slider, .bgn-slider img{
+        height: 400px;
+    }
+    .header-content-left{
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    
+    header, .bgn-slider, .bgn-slider img{
+        height: 400px;
+    }
+    .bgn-slider{
+        width: 120%;
+        object-fit: cover
+    }
+}
+
+@media screen and (max-width: 360px) {
+    h1{
+        font-size: 2rem;
+    }
+    .bgn-slider{
+        width: 170%;
+        transform: translateX(-20%);
+    }
+    
+    header, .bgn-slider, .bgn-slider img{
+        height: 350px;
+    }
+}
+
