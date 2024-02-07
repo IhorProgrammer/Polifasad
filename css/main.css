@@ -21,10 +21,11 @@ h1,h2,h3,h4,h5,h6{
 }
 .header-container > .header-content{
     flex: 1;
+    display: flex;
+    align-items: center;
 }
 .header-content-left{
     width: 50%;
-    margin-top: 150px;
     text-align: center;
 }
 .header-bgn-right{
@@ -97,7 +98,12 @@ header, .bgn-slider, .bgn-slider img{
 /* Card */
 
 .services-full{
-    height: 280px;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+    align-items: center;
 }
 
 .services .card{
@@ -121,17 +127,21 @@ header, .bgn-slider, .bgn-slider img{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50px;
-    font-size: 16px;
-    font-weight: 700;
     text-transform: uppercase;
-    bottom: 0;
-}
 
+    position: absolute;
+    bottom: 0;
+    font-size: 18px;
+    height: 65px;
+    width: 100%;
+}
+.services-content h3{
+    font-size: xx-large;
+}
 .services-content{
+    padding: 10%;
     max-width: 300px;
     margin: 0 auto;
-    padding: 5%;
 }
 
 .services-content p {
