@@ -7,7 +7,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
         <!-- Import font-family -->
-        <link rel="stylesheet" href="fonts/geometria/geometria.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- Materialize CSS -->
@@ -29,38 +32,37 @@
                     <img src="images/images/work_examples/wp_20170624_002.jpg">
                 </div>
             </div>
-            <div class="container header-container">
-                <nav role="navigation">
-                    <div class="nav-wrapper row">
-                        <div class="logo-container col s8 m4 l3">
-                            <img src="images/logo/головна-favicon.ico" alt="Logo">
-                            <a href="index.html" class="logo">Тепла оселя</a>
-                        </div>
-                        <div class="col s4 m8 l9 nav-reverse">
-                            <ul class="right hide-on-med-and-down">
-                                <li><a href="#">Головна</a></li>
-                                <li><a href="#">Зразки термоплит</a></li>
-                                <li><a href="#">Монтаж поліфасаду</a></li>
-                                <li><a href="#">Галерея</a></li>
-                            </ul>
-                            <ul id="nav-mobile" class="sidenav" style="right: 0px;">
-                                <li><a href="#">Головна</a></li>
-                                <li><a href="#">Зразки термоплит</a></li>
-                                <li><a href="#">Монтаж поліфасаду</a></li>
-                                <li><a href="#">Галерея робіт</a></li>
-                                <li><a href="#">Зв'язатися з нами</a></li>
-
-                            </ul>
-                            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons menu-icon">menu</i></a>
-                        </div>
+            <nav role="navigation" class="font-roboto-slab">
+                <div class="nav-wrapper row">
+                    <div class="logo-container col s8 m4 l3">
+                        <img src="images/logo/головна-favicon.ico" alt="Logo">
+                        <a href="index.html" class="logo">Тепла оселя</a>
                     </div>
-                </nav>
+                    <div class="col s4 m8 l9 nav-reverse">
+                        <ul class="right hide-on-med-and-down uppercase">
+                            <li><a href="#">Головна</a></li>
+                            <li><a href="#">Зразки термоплит</a></li>
+                            <li><a href="#">Монтаж поліфасаду</a></li>
+                            <li><a href="#">Галерея</a></li>
+                        </ul>
+                        <ul id="nav-mobile" class="sidenav" style="right: 0px;">
+                            <li><a href="#">Головна</a></li>
+                            <li><a href="#">Зразки термоплит</a></li>
+                            <li><a href="#">Монтаж поліфасаду</a></li>
+                            <li><a href="#">Галерея робіт</a></li>
+                            <li><a href="#">Зв'язатися з нами</a></li>
 
+                        </ul>
+                        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons menu-icon">menu</i></a>
+                    </div>
+                </div>
+            </nav>
+            <div class="container header-container">
                 <div class="header-content">
                     <div class="header-content-left">
                         <h1 class="center">Поліфасад</h1>
                         <div class="center">
-                            <p>новий престижний вигляд вашої оселі економія на опаленні до 60%</p>
+                            <p >новий престижний вигляд вашої оселі економія на опаленні до 60%</p>
                         </div>
 
                         <div class="center">
@@ -79,12 +81,54 @@
             </div>
         </header>
         <main>
-            <section class="project-type">
-                
+            <section class="project-type-container">
+                <h2 class="center title font-roboto-slab">Ми утеплюємо</h2>
+                <div class="project-type-cards">
+                    <div class="project-type-card center">
+                        <div class="project-type-card-img-conteiner">
+                            <img src="images/images/photo/h1.jpg" alt="">
+                        </div>
+                        <div class="project-type-card-content">
+                            <div class="type">
+                                <h3>БАГАТОПОВЕРХОВІ  БУДИНКИ</h3>
+                            </div>
+                            <a href="">ПОДИВИТСЬ</a>
+                        </div>
+                    </div>
+                    <div class="project-type-card center active ">
+                        <div class="project-type-card-img-conteiner">
+                            <img src="images/images/photo/h2.jpg" alt="">
+                        </div>
+                        <div class="project-type-card-content">
+                            <div class="type">
+                                <h3>ПРИВАТНІ  БУДИНКИ</h3>
+                            </div>
+                            <a href="">ПОДИВИТСЬ</a>
+                        </div>
+                    </div>
+                    <div class="project-type-card center">
+                        <div class="project-type-card-img-conteiner">
+                            <img src="images/images/photo/h3.jpg" alt="">
+                        </div>
+                        <div class="project-type-card-content">
+                            <div class="type">
+                                <h3>МАГАЗИНИ, НЕЖИТЛОВІ ПРИМІЩЕННЯ</h3>
+                            </div>
+                            <a href="">ПОДИВИТСЬ</a>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section class="bgn-overplay">
-                
+
+            <section class="bgn-overplay parallax-container">
+                <div class="parallax bgn-img-overplay"><img src="images/images/photo/montage3.jpg"></div>
+                <a href="https://www.youtube.com/watch?v=gAhW8YFKDZg" class="bgn-overplay-context">
+                    <span><i class="material-icons medium">play_arrow</i></span>
+                    <span class="btn-outline1"></span> 
+                    <span class="btn-outline2"></span> 
+                </a>
             </section>
+
             <section class="services row">
                 <div class="card col s12 m6 l3">
                     <div class="services-full center">

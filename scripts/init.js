@@ -19,6 +19,7 @@
             arrows: false,
             
         });
+        $('.parallax').parallax();
     }); 
   })(jQuery);
   
