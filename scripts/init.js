@@ -13,13 +13,40 @@
             infinite: true,
             speed: 1000,
             fade: true,
-            cssEase: 'linear',
+            cssEase: 'ease-out',
             autoplay: true,
             autoplaySpeed: 5000,
             arrows: false,
             
         });
+        $('.bgn-slider img.slick-active').css("animation-play-state", "running")
+
         $('.parallax').parallax();
+
+        // On before slide change
+        $('.bgn-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+           $('.bgn-slider img.slick-active').css("animation-play-state", "running")
+        });
+        $('.bgn-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+            $('.bgn-slider img.slick-active').css("animation-play-state", "paused")
+        });
+
+        let last = $('.project-type-card');
+        $('.project-type-card').hover(
+            function() {
+                // Функція, яка викликається при наведенні
+                last.removeClass('active');
+                console.log(last)
+                last =  $(this).closest('.project-type-card');
+                last.addClass('active');
+
+            },
+            function() {
+
+            }
+        );
+
+        
     }); 
   })(jQuery);
   

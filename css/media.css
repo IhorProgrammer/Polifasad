@@ -1,0 +1,62 @@
+
+@media screen and (max-width: 992px) {
+
+    .header-bgn-right {
+        display: none;
+    }
+    .bgn-slider{
+        width: 140%;
+        object-fit: cover
+    }
+    header{
+        height: 800px;
+    }
+    .header-content-left{
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .services .card:nth-child(1),
+    .services .card:nth-child(4){
+        background-color: #2d2d2d;
+    }
+
+    .services .card:nth-child(2),
+    .services .card:nth-child(3){
+        background-color: #373737;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    header{
+        height: 600px;
+    }
+    .bgn-slider{
+        width: 200%;
+        object-fit: cover
+    }
+    .services .card:nth-child(even){
+        background-color: #2d2d2d;
+    }
+    
+    .services .card:nth-child(odd){
+        background-color: #373737;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+    h1{
+        font-size: 2rem;
+    }
+    .bgn-slider{
+        width: 170%;
+        transform: translateX(-20%);
+    }
+
+    header{
+        height: 350px;
+    }
+}
