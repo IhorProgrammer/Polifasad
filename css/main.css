@@ -1,6 +1,6 @@
 *{
     font-family: "Exo 2", sans-serif;
-
+    text-rendering: optimizeLegibility;
 }
 
 .uppercase, .uppercase *{
@@ -16,6 +16,11 @@ h1,h2,h3,h4,h5,h6{
     margin: 0;
 
 }
+.aalign-items-center{
+    display: flex;
+    align-items: center;
+}
+
 .p0{
     padding: 0 !important;
 }
@@ -54,8 +59,22 @@ header{
 header nav{
     z-index: 999;
 }
-.menu-icon{
+header .sidenav-trigger {
+    display: flex;
+    align-items: center;
+}
+header .nav-container ul.desktop-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.nav-icon{
     font-size: 40px !important;
+    text-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: 'liga';
+    -moz-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    height: 32px;
 }
 .header-container{
     display: flex;
@@ -87,8 +106,6 @@ header nav{
 header nav {
     background-color: #ffffff00;
     box-shadow: none;
-    width: 90%;
-    left: 5%;
     position: absolute;
 }
 header .nav-container, header .desktop-nav{
@@ -244,12 +261,15 @@ header .nav-container, header .desktop-nav{
     margin: 0;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 .project-type-card{
     cursor: pointer;
     position: relative;
     height: 350px;
-    width: 30% !important;
+    width: 32%;
+    margin: 10px 0;
+
 }
 
 .project-type-card.active .project-type-card-content {
@@ -293,7 +313,7 @@ header .nav-container, header .desktop-nav{
     display: block;
     width: 80%;
     margin: 10px auto;
-    padding: 10px 25px;
+    padding: 10px 20px;
     font-weight: bold;
     background-color: #ae2a27;
     color: white;
