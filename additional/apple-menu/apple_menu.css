@@ -49,7 +49,7 @@
     display: none;
     padding: 0px 48px 0;
     list-style: none;
-    min-height: calc(100vh - var(--apple-menu-height)); 
+    min-height: 110vh; 
 }
 .apple-menu ul.menu li.menu-item {
     border-bottom: 1px solid #333;
