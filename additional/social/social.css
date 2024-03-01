@@ -1,0 +1,16 @@
+/* Social */
+.social {
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.social > a, .social .icon{
+    height: inherit;
+    display: block;
+    padding: 0;
+
+}
+.social .icon{
+    margin-right: 10px;
+}

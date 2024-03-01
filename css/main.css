@@ -54,7 +54,7 @@ h1,h2,h3,h4,h5,h6{
 
 header{
     color: white;
-    height: 100vh;
+    height: 700px;
 }
 header nav{
     z-index: 1;
@@ -116,10 +116,12 @@ header .nav-container, header .desktop-nav{
     display: flex;
     align-items: center;
 }
+
 .logo{
     margin-left: 10px;
-    font-size: 100%;
+    font-size: 2rem;
     text-transform: uppercase;
+    color: white;
 }
 
 .nav-reverse{
@@ -265,38 +267,58 @@ header .nav-container, header .desktop-nav{
 .project-type-card{
     cursor: pointer;
     position: relative;
-    height: 350px;
+    /* height: 350px; */
     width: 48%;
     margin: 10px 0;
 
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+
+    max-width: 450px;
 }
 
-.project-type-card.active .project-type-card-content {
+.project-type-card:hover .project-type-card-content {
     color: white;
     background-color: #ae2a27;
 }
-.project-type-card.active .project-type-card-content a{
+.project-type-card:hover .project-type-card-content a{
     color: black;
     background-color: rgb(255, 255, 255);
 }
 
 
 .project-type-card-img-conteiner{
-    height: 100%;
+    height: 60%;
+    /* height: 100%; */
     overflow: hidden;
+    flex: 1;
+
 }
+
 .project-type-card-content{
     word-wrap: break-word;
-    position: absolute;
-    bottom: -80px;
-    width: 80%;
-    left: 10%;
+    /* position: absolute; */
+    /* bottom: -80px; */
+    /* width: 80%; */
+    /* left: 10%; */
     background-color: #2d2d2d;
     color: white;
     text-decoration: none;
     padding: 20px 10px;
-    z-index: 1;
+    /* z-index: 1; */
+
+    position: static;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    height: auto;
 }
+
+
+
+
+
 .project-type-card-content h3{
     font-size: 18px;
     text-wrap: wrap;
@@ -305,12 +327,15 @@ header .nav-container, header .desktop-nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px;
+    /* height: 80px; */
     margin-bottom: 10px;
+    height: 50px;
+
 }
 .project-type-card-content a{
     display: block;
-    width: 80%;
+    /* width: 80%; */
+    width: 90%;
     margin: 10px auto;
     padding: 10px 20px;
     font-weight: bold;
@@ -322,6 +347,7 @@ header .nav-container, header .desktop-nav{
 .project-type-card img{
     height: 100%;
 }
+
 
 /* .bgn-overplay */
 
@@ -426,21 +452,4 @@ footer img.boss{
     width: 70%;
     display: block;
     margin: 10px auto;
-}
-
-/* Social */
-.social {
-    height: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.social > a, .social .icon{
-    height: inherit;
-    display: block;
-    padding: 0;
-
-}
-.social .icon{
-    margin-right: 10px;
 }
