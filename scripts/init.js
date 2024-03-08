@@ -30,23 +30,6 @@
         $('.bgn-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
             $('.bgn-slider img.slick-active').css("animation-play-state", "paused")
         });
-
-        // let last = $('.project-type-card');
-        // $('.project-type-card').hover(
-        //     function() {
-        //         // Функція, яка викликається при наведенні
-        //         last.removeClass('active');
-        //         console.log(last)
-        //         last =  $(this).closest('.project-type-card');
-        //         last.addClass('active');
-
-        //     },
-        //     function() {
-
-        //     }
-        // );
-
-        
     }); 
   })(jQuery);
   
