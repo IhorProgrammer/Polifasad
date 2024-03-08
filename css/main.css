@@ -2,6 +2,11 @@
     font-family: "Exo 2", sans-serif;
     text-rendering: optimizeLegibility;
 }
+:root{
+    --first-color: #2d2d2d;
+    --second-color: #454545;
+
+}
 
 .uppercase, .uppercase *{
     text-transform: uppercase !important;
@@ -169,7 +174,7 @@ header .nav-container, header .desktop-nav{
     font-weight: normal;
 }
 .phone_list li>a:hover{
-    background-color: rgb(69, 69, 69);
+    background-color: var(--second-color);
 }
 .bgn-slider, .bgn-slider .slick-list,  .bgn-slider .slick-track{
     height: inherit;
@@ -194,11 +199,11 @@ header .nav-container, header .desktop-nav{
 }
 
 .services .card:nth-child(even){
-    background-color: #2d2d2d;
+    background-color: var(--first-color);
 }
 
 .services .card:nth-child(odd){
-    background-color: #373737;
+    background-color: var(--second-color);
 }
 
 .services-full{
@@ -234,18 +239,18 @@ header .nav-container, header .desktop-nav{
     height: 65px;
     width: 100%;
 }
-.services-content h3{
+.services-content .title{
     font-size: xx-large;
 }
 
 .services-content p {
-    color: gray;
+    color: white;
 }
 
 
 /* Project type */
 .project-type-container{
-    background-color: #373737;
+    background-color: var(--second-color);
     padding-top: 1px;
 }
 .project-type-container .title{
@@ -296,7 +301,7 @@ header .nav-container, header .desktop-nav{
 
 .project-type-card-content{
     word-wrap: break-word;
-    background-color: #2d2d2d;
+    background-color: var(--first-color);
     color: white;
     text-decoration: none;
     padding: 20px 10px;
@@ -309,19 +314,14 @@ header .nav-container, header .desktop-nav{
 
 
 
-
-
-.project-type-card-content h3{
-    font-size: 18px;
-    text-wrap: wrap;
-}
 .project-type-card-content .type{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 80px; */
     margin-bottom: 10px;
     height: 50px;
+    font-size: 18px;
+    text-wrap: wrap;
 
 }
 .project-type-card-content a{
@@ -405,14 +405,14 @@ header .nav-container, header .desktop-nav{
 
 /* Footer */
 footer{
-    background-color: #2d2d2d;
+    background-color: var(--first-color);
     color: white;
     padding: 1px;
     margin: 0;
     border-top: 5px #ae2a27 solid;
 }
 footer .container{
-    background-color: #2d2d2d;
+    background-color: var(--first-color);
     margin-top: 40px;
 }
 
@@ -444,4 +444,8 @@ footer img.boss{
     width: 70%;
     display: block;
     margin: 10px auto;
+}
+footer .phone-list li{
+    font-size: 1.2rem;
+    margin: 10px 0;
 }
