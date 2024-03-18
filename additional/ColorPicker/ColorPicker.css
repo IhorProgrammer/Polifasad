@@ -71,17 +71,6 @@
     width: inherit;
     cursor: pointer;
 }
-.anm-pulse{
-    animation-name: animation-pulse-border;
-    animation-duration: 0.7s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-play-state: paused;
-}
-.anm-pulse:hover{
-    animation-play-state: running;
-}
 @keyframes animation-pulse-border {
     100% {
         border-width: 26px;

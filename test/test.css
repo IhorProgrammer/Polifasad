@@ -39,6 +39,7 @@ body{
     aspect-ratio: 1/1;
     position: relative;
     height: auto;
+    box-shadow: 0px 0px 16px 4px rgba(255,255,255,1);
 }
 .slider-for,.slider-for .slick-slider, .slider-for .slick-list,  .slider-for .slick-track{
     height: 100%;
@@ -69,11 +70,11 @@ body{
 .slider-container .bgn-right{
     right: 0px;
     background: #ffffff00;
-    background: linear-gradient(-90deg, rgba(0,0,0,0.29744397759103647) 0%, rgba(255,255,255,0) 30%, rgba(255,255,255,0) 100%);
+    /* background: linear-gradient(-90deg, rgba(0,0,0,0.29744397759103647) 0%, rgba(255,255,255,0) 30%, rgba(255,255,255,0) 100%); */
 }
 .slider-container .bgn-left{
     background: #ffffff00;
-    background: linear-gradient(90deg, rgba(0,0,0,0.29744397759103647) 0%, rgba(255,255,255,0) 30%, rgba(255,255,255,0) 100%);
+    /* background: linear-gradient(90deg, rgba(0,0,0,0.29744397759103647) 0%, rgba(255,255,255,0) 30%, rgba(255,255,255,0) 100%); */
 }
 .slider-container .slider-number {
     font-size: 3rem;
