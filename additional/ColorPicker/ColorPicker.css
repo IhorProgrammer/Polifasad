@@ -1,0 +1,86 @@
+#colorPicker, .Okm-colorPicker{
+    position: relative;
+
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(50%);
+    -webkit-clip-path: circle(50%);
+    padding: 0;
+    margin: 0;
+}
+.Okm-colorPicker .sector {
+    position: absolute;
+    cursor: pointer;
+    transform-origin: 0% 0%;
+    width: 50%;
+    height: 50%;
+    left: 50%;
+    top: 50%;
+    padding: 0;
+    margin: 0;
+} 
+
+
+.Okm-colorPicker .sector:hover::before{
+    position: absolute !important;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+.Okm-colorPicker .circle{
+    position: absolute;
+    clip-path: circle(50%);
+    -webkit-clip-path: circle(50%);
+    transition: all 2s;
+}
+.Okm-colorPicker:hover .circle:nth-child(even){
+    transform: rotate(10deg);
+}
+#colorPickerViewColor{
+    position: absolute;
+    overflow: hidden;
+    clip-path: circle(50%);
+    -webkit-clip-path: circle(50%);
+    background-color: #fff;
+    width: 120px;
+    height: 120px;
+    border: white solid 20px;
+    border-radius: 50%;
+}
+#colorPickerViewColor:hover{
+    border: white solid 20px;
+}
+#colorPickerTarget{
+    height: inherit;
+    width: inherit;
+    cursor: pointer;
+}
+.anm-pulse{
+    animation-name: animation-pulse-border;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: paused;
+}
+.anm-pulse:hover{
+    animation-play-state: running;
+}
+@keyframes animation-pulse-border {
+    100% {
+        border-width: 26px;
+    }
+}
+#viewColorFullScreenBgn.checkColor{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}

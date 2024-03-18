@@ -1,5 +1,8 @@
 
 @media screen and (max-width: 992px) {
+    *{
+        cursor: auto !important;
+    }
     .main-content{
         height: 800px;
     }

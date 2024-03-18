@@ -1,184 +1,91 @@
-/* @okimoon Copyright 2024 Fonticons, Inc. */
-:root {
-    --apple-menu-height: 80px;
-    --apple-menu-icon-width: 50px;
-    --apple-menu-bgn-color: rgba(0, 0, 0, 0.8);
-    --apple-menu-open-bgn-color: rgb(0,0,0);
-    --apple-menu-text-color: rgb(255, 255, 255);
-    --apple-menu-burger-color: rgb(255, 255, 255);
-}
-  
-.apple-menu {
-    position: fixed;
-    display: block;
-    top: 0;
-    left: 0;
-    height: var(--apple-menu-height);
-    width: 100%;
-    background: var(--apple-menu-bgn-color);
-    transition: all 0.5s ease-out, background 1s ease-out;
-    transition-delay: 0.2s;
-    z-index: 1;
-}
-.apple-menu * {
-    font-size: 3rem;
+body{
+    background-color: #2f2f2f;
 }
 
-.apple-menu ul.menu {
-    margin-top: 10px;
-    display: none;
-    padding: 0px 48px 0;
-    list-style: none;
-    min-height: calc(100vh - var(--apple-menu-height)); 
-}
-.apple-menu ul.menu li.menu-item {
-    border-bottom: 1px solid #333;
-    margin-top: 5px;
-    transform: scale(1.15) translateY(-30px);
-    opacity: 0;
-    transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99), opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    display: flex;
-    justify-content: center;
-}
-.apple-menu ul.menu li.menu-item a {
-    display: block;
-    color: var(--apple-menu-text-color);
-    font-weight: 100;
-    text-decoration: none;
-    line-height: 2.35;
-    font-weight: 200;
-}
-
-
-.apple-menu .menu .menu-item:nth-child(1) { transition-delay: 0.49s; }
-.apple-menu .menu .menu-item:nth-child(2) { transition-delay: 0.42s; }
-.apple-menu .menu .menu-item:nth-child(3) { transition-delay: 0.35s; }
-.apple-menu .menu .menu-item:nth-child(4) { transition-delay: 0.28s; }
-.apple-menu .menu .menu-item:nth-child(5) { transition-delay: 0.21s; }
-.apple-menu .menu .menu-item:nth-child(6) { transition-delay: 0.14s; }
-.apple-menu .menu .menu-item:nth-child(7) { transition-delay: 0.7s; }
-.apple-menu .menu .menu-item:nth-child(8) { transition-delay: 0.0s; }
-
-.apple-menu .menu-opened .menu .menu-item:nth-child(1) { transition-delay: 0.27s; }
-.apple-menu .menu-opened .menu .menu-item:nth-child(2) { transition-delay: 0.34s; }
-.apple-menu .menu-opened .menu .menu-item:nth-child(3) { transition-delay: 0.41s; }
-.apple-menu .menu-opened .menu .menu-item:nth-child(4) { transition-delay: 0.48s; }
-.apple-menu .menu-opened .menu .menu-item:nth-child(5) { transition-delay: 0.55s; }
-.apple-menu .menu-opened .menu .menu-item:nth-child(6) { transition-delay: 0.62s; }
-.apple-menu .menu-opened .menu .menu-item:nth-child(7) { transition-delay: 0.69s; }
-.apple-menu .menu-opened .menu .menu-item:nth-child(8) { transition-delay: 0.76s; }
-
-
-.apple-menu.menu-opened ul.menu{
-    display: block;
-}
-.apple-menu.menu-opened {
-    height: auto;
-    background-color: var(--apple-menu-open-bgn-color);
-    transition: all 0.3s ease-in, background 0.5s ease-in;
-    transition-delay: 0.25s;
-}
-.apple-menu.menu-opened .burger-container {
-    transform: rotate(90deg);
-}
-.apple-menu.menu-opened .burger-container #burger .bar {
-    transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    transition-delay: 0.2s;
-}
-.apple-menu.menu-opened .burger-container #burger .bar.topBar {
-    transform: translateY(4px) rotate(45deg);
-}
-.apple-menu.menu-opened .burger-container #burger .bar.btmBar {
-    transform: translateY(3px) rotate(-45deg);
-}
-.apple-menu.menu-opened ul.menu li.menu-item {
-    transform: scale(1) translateY(0px);
-    opacity: 1;
-}
-.apple-menu.menu-opened .icon.icon-bag {
-    transform: translateX(75px);
-    transition-delay: 0.3s;
-}
-
-/* Triger */
-.apple-menu .burger-container {
-    display: block;
-    height: var(--apple-menu-height);
-    width: var(--apple-menu-icon-width);
-    cursor: pointer;
-    transform: rotate(0deg);
-    transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    margin: 0;
-    margin-left: 10px;
-}
-.apple-menu .burger-container #burger {
-    height: 100%;
-    width: 100%;
+.image-picker{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-.apple-menu .burger-container #burger .bar {
-    width: 100%;
-    height: 5px;
-    display: block;
-    background: var(--apple-menu-burger-color);
-    transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    transition-delay: 0s;
-}
-.apple-menu .burger-container #burger .bar.topBar {
-    transform: translateY(0px) rotate(0deg);
-}
-.apple-menu .burger-container #burger .bar.btmBar {
-    transform: translateY(6px) rotate(0deg);
-}
-
-
-
-/* Social */
-.apple-menu .menu .menu-item.social{
-    justify-content: center;
     align-items: center;
+    margin: 2% 0;
+    overflow: hidden;
+}
+
+.inherit {
+    height: inherit;
+}
+.slider-top{
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    margin: 5% 0;
+}
+.slider-container{
+    margin-right: 5%;
+}
+.slider-for, .slider-for .slick-slider, .slider-for .slick-list,  .slider-for .slick-track{
+    height: 400px;
+    width: 400px;
+    padding: 0;
+}
+
+.slider-nav, .slider-nav .slick-slider, .slider-nav .slick-list,  .slider-nav .slick-track{
+    height: 150px;
+    width: 600px;
+    padding: 0;
+    cursor: pointer;
+}
+.slider-container{
+    position: relative;
+    height: inherit;
     width: 100%;
-    margin: 0 auto;
-    border: none;
-    position: static;
-    margin-top: 40px;
-    height: 40px;
 }
-.menu .menu-item.social img {
-    margin: 0 20px;
+.slider-container .bgn-overflow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #00000033;
+    z-index: 1;
 }
-
-/* Media */
-@media screen and (max-height: 992px) {
-    .apple-menu * {
-        font-size: 2rem;
-    }
-}
-@media screen and (max-width: 360px) {
-    .apple-menu * {
-        font-size: 1.2rem;
-    }
-    .menu .menu-item.social img {
-        margin: 0 10px;
-    }
-    .apple-menu .menu .menu-item.social{
-        height: 30px;
-    }
+.slider-for-overflow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    overflow: hidden;
 }
 
-@media screen and (max-height: 400px) {
-    .apple-menu .menu .menu-item.social{
+.modal-trigger{
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,255,0,1) 20%, rgba(0,255,0,1) 40%, rgba(0,255,255,1) 60%, rgba(0,0,255,1) 80%, rgba(255,0,255,1) 100%);
+    height: inherit;
+    width: 100px;
+    cursor: pointer;
+}
+
+.Okm-colorPicker{
+    height: 400px;
+    width: 400px;
+}
+
+h1{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.apple-menu {
+    position: relative;
+}
+
+@media screen and (max-width: 992px) {
+    .slider-bottom{
         display: none;
     }
-}
-@media screen and (max-height: 600px) {
-    .apple-menu .menu .menu-item.social {
-        position: static;
-        margin-top: 40px;
-        height: 40px;
+    .slider-top{
+        flex-direction: column;
+        height: auto;
     }
+
+    
 }
