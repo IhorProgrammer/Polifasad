@@ -6,46 +6,88 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2% 0;
     overflow: hidden;
+    width: 95%;
+    margin: 2% auto;
 }
 
 .inherit {
     height: inherit;
 }
 .slider-top{
+    width: 100%;
     height: 400px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin: 5% 0;
 }
-.slider-container{
-    margin-right: 5%;
+.slider-bottom{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
 }
-.slider-for, .slider-for .slick-slider, .slider-for .slick-list,  .slider-for .slick-track{
-    height: 400px;
-    width: 400px;
-    padding: 0;
+.slider-bottom i {
+    font-size: 4rem;
+    line-height: inherit;
+    cursor: pointer;
 }
 
-.slider-nav, .slider-nav .slick-slider, .slider-nav .slick-list,  .slider-nav .slick-track{
-    height: 150px;
-    width: 600px;
+.slider-container
+{
+    margin-right: 5%;
+    aspect-ratio: 1/1;
+    position: relative;
+    height: auto;
+}
+.slider-for,.slider-for .slick-slider, .slider-for .slick-list,  .slider-for .slick-track{
+    height: 100%;
+    width: 100%;
+}
+
+.slider-nav{
+    height: 200px;
+    width: 800px;
     padding: 0;
     cursor: pointer;
 }
-.slider-container{
-    position: relative;
-    height: inherit;
+.slider-nav .slick-slider, .slider-nav .slick-list,  .slider-nav .slick-track{
+    height: 100%;
     width: 100%;
 }
-.slider-container .bgn-overflow{
+.slider-container .bgn-overflow,.slider-container .bgn-left, .slider-container .bgn-right, .slider-container .slider-number{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #00000033;
     z-index: 1;
+    pointer-events: none;
 }
+.slider-container .bgn-left, .slider-container .bgn-right{
+    width: 50%;
+    z-index: 2;
+}
+.slider-container .bgn-right{
+    right: 0px;
+    background: #ffffff00;
+    background: linear-gradient(-90deg, rgba(0,0,0,0.29744397759103647) 0%, rgba(255,255,255,0) 30%, rgba(255,255,255,0) 100%);
+}
+.slider-container .bgn-left{
+    background: #ffffff00;
+    background: linear-gradient(90deg, rgba(0,0,0,0.29744397759103647) 0%, rgba(255,255,255,0) 30%, rgba(255,255,255,0) 100%);
+}
+.slider-container .slider-number {
+    font-size: 3rem;
+    color: white;
+    font-weight: bolder;
+    z-index: 3;
+    left: 20px;
+}
+
+.slider-nav .slick-slide {
+    margin: 0px 5px;
+}
+
+
 .slider-for-overflow{
     position: absolute;
     top: 0;
@@ -55,37 +97,49 @@ body{
     overflow: hidden;
 }
 
-.modal-trigger{
-    background: rgb(255, 255, 255);
-    background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,255,0,1) 20%, rgba(0,255,0,1) 40%, rgba(0,255,255,1) 60%, rgba(0,0,255,1) 80%, rgba(255,0,255,1) 100%);
+.colorPicker-container{
     height: inherit;
-    width: 100px;
-    cursor: pointer;
-}
-
-.Okm-colorPicker{
-    height: 400px;
-    width: 400px;
+    aspect-ratio: 1/1;
+    width: auto;
 }
 
 h1{
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 2.5rem;
+    margin: 10px 0;
+    text-align: center;
 }
 
 .apple-menu {
     position: relative;
 }
-
 @media screen and (max-width: 992px) {
+    .slider-top{
+        height: 300px;
+    }
+    .slider-nav{
+        height: 150px;
+        width: 550px;
+    }
+}
+@media screen and (max-width: 662px) {
     .slider-bottom{
         display: none;
     }
     .slider-top{
-        flex-direction: column;
         height: auto;
+        display: block;
+        width: 280px;
+        margin: 0px;
     }
+    .slider-container{
+        margin: 10px 0;
+    }
+}
 
-    
+#colorPickerViewColor{
+    width: 100px;
+    height: 100px;
 }

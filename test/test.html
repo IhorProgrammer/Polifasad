@@ -24,11 +24,11 @@
     <link rel="stylesheet" href="../additional/ColorPicker/ColorPicker.css">
     <!-- Slick -->
     <link rel="stylesheet" type="text/css" href="../other_library/slick_library/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../other_library/slick_library/slick-theme.css"/>
     
-    <link rel="stylesheet" href="test.css">
-    <style>
-    </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <link rel="stylesheet" href="test.css">
     <title>Document</title>
 </head>
 <body>
@@ -74,8 +74,10 @@
         <h1>Зразки термоплит</h1>
         <div class="slider-top">
             <div class="slider-container">
-                <div class="bgn-overflow"></div>
-
+                <div class="bgn-overflow" style="pointer-events: none;"></div>
+                <div class="bgn-left" style="pointer-events: none;"></div>
+                <div class="bgn-right" style="pointer-events: none;"></div>
+                <div id="slider_number" class="slider-number">1</div>
                 <div class="slider-for">
                     <img src="../images/tile/1.png" data-lazy="../images/tile/1.img"/>
                     <img src="../images/tile/2.png" data-lazy="../images/tile/2.img"/>
@@ -99,9 +101,9 @@
             </div>
             <div class="colorPicker-container">
                 <!-- Дефолт вид  -->
-                <div class="Okm-colorPicker">
+                <div class="Okm-colorPicker square">
                     <div id="colorPicker"></div>
-                    <div id="colorPickerViewColor" class="viewColor anm-pulse" >
+                    <div id="colorPickerViewColor" class="viewColor anm-pulse square" >
                         <div id="colorPickerTarget" style="display: flex; justify-content: center; align-items: center;">
                         </div>
                     </div>
@@ -109,6 +111,9 @@
             </div>
         </div>
         <div class="slider-bottom">
+            <div id="prev_sliderBottom" class="left-arrow">
+                <i class="material-icons">chevron_left</i>
+            </div>
             <div class="slider-nav">
                 <img src="../images/tile/1.png" data-lazy="../images/tile/1.img"/>
                 <img src="../images/tile/2.png" data-lazy="../images/tile/2.img"/>
@@ -128,6 +133,9 @@
                 <img src="../images/tile/16.png" data-lazy="../images/tile/16.img"/>
                 <img src="../images/tile/17.png" data-lazy="../images/tile/17.img"/>
                 <img src="../images/tile/18.png" data-lazy="../images/tile/18.img"/>
+            </div>
+            <div id="next_sliderBottom" class="right-arrow">
+                <i class="material-icons">chevron_right</i>
             </div>
         </div>
     </section>
@@ -192,20 +200,24 @@
             slidesToScroll: 1,
             arrows: false,
             fade: true,
-            asNavFor: '.slider-nav'
+            swipeToSlide: true,
+            dots: true,
+            
+            // asNavFor: '.slider-nav'
         });
         $('.slider-nav').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
             asNavFor: '.slider-for',
-            arrows: false,
-            focusOnSelect: true
+            focusOnSelect: true,
+            centerMode: true,
+            arrows: true,
+            nextArrow: document.getElementById("next_sliderBottom"),
+            prevArrow: document.getElementById("prev_sliderBottom"),
         });
-
-        $(document).ready(function(){
-            $('.modal').modal();
-        });
-                
+        $('.slider-for').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+            $('#slider_number').text(nextSlide + 1);
+        });  
     </script>
     <!-- Скрипт подключения -->
     <script >
@@ -216,15 +228,22 @@
             ["B081AB","B1C93D","7292BB","818DB5","EAB86F","EEA76F","D4AE6D","B28742","CE8D65","D38A57","A5764C","937150","595144"],
             ["C092B7","BFD99C","80A3C3","93A0C2","F7CB84","F4B784","EBBF7E","D0A769","E0A178","D88E68","B68759","A4805E","847264"],
         ]
-        okm.createCircles(100, colorPickerColors);
+        
+        let rangeCircleColorPicker = 90;
+        const windowWidth = window.innerWidth; 
+        if( windowWidth < 600 ) {
+            rangeCircleColorPicker = 60;
+        } else if (windowWidth < 992) {
+            rangeCircleColorPicker = 70;
+        }
+        okm.createCircles(rangeCircleColorPicker, colorPickerColors);
+        
 
         // Получаем стили псевдоэлемента ::before
         const bgnOverflow = document.querySelector(".bgn-overflow");
         okm.event.addEventListener("click-color", (event) => {
             let selectedColor = event.target.id;
-
             bgnOverflow.style.backgroundColor = '#' + selectedColor + '33';
-            //styles.setProperty('background-color', hexToRgbA('#' + selectedColor));
         });
         // Просмотр цвета
         //viewColorFullScreen(okm, document.getElementById("viewColorFullScreen"), document.getElementById("viewColorFullScreenBgn"));
@@ -232,7 +251,7 @@
             alert("Click " + okm.selectedColor);
         });
 
-
+        
 
         function hexToRgbA(hex){
             var c;
